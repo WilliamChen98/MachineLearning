@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+#  show the image of dataset and the separating line
 class Picture:
     def __init__(self, w, b, labels, title):
         self.b = b
@@ -19,8 +20,8 @@ class Picture:
         plt.plot(x_data, y_data, color='b', label='sample data')
         for i in range(0, len(self.label)):
             if self.label[i] > 0:
-                plt.scatter(data[i][0], data[i][1], color='r', s=5)
+                plt.scatter(data[i][0], data[i][1], color='r', s=50)
             else:
-                plt.scatter(data[i][0], data[i][1], color='g', s=5, marker='x')
+                plt.scatter(data[i][0], data[i][1], color='g', s=50, marker='x')
         plt.savefig(self.title + '_not linearly separable.png', dpi=75)
         plt.show()

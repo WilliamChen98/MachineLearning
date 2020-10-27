@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 
-# 训练感知机模型
+# pocket algorithm
 class Pocket:
     def __init__(self, input_samples, input_labels):
         self.samples = input_samples
@@ -46,6 +46,7 @@ class Pocket:
                 print('最终训练得到的w和b为：', self.best_weight, self.best_threshold)
                 print('迭代次数为：', iteration_number)
                 is_find = True
+                break
             n = mistakes[random.randint(0, len(mistakes) - 1)]
             self.update(self.labels[n], self.samples[n, :])
             iteration_number += 1

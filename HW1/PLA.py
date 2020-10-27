@@ -1,6 +1,7 @@
 import numpy as np
 
 
+# pla algorithm
 class Perceptron:
     def __init__(self, input_samples, input_labels):
         self.samples = input_samples
@@ -35,6 +36,6 @@ class Perceptron:
                 print('迭代次数为：', iteration_number)
                 break
             if failed_point_number == 0:
-
+                print('迭代次数为：', iteration_number)
                 is_find = True
         return self.weight, self.threshold
